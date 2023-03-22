@@ -13,9 +13,13 @@ class App: Application() {
 
             val loader = FXMLLoader(this.javaClass.getResource("home.fxml"));
 
+            val scene: Scene = Scene(loader.load(), 500.0, 500.0);
+            scene.stylesheets.add(
+                javaClass.getResource("assets/css/Application.css")?.toExternalForm() ?: error("no file found")
+            );
 
-            primaryStage.scene = Scene(loader.load(), 500.0, 500.0);
-            primaryStage.title = "window";
+            primaryStage.scene = scene;
+            primaryStage.title = "Space Invaders";
             primaryStage.show();
 
         }
