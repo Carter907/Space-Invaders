@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="kar.creata.spaceinvaders.HomeController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <center>
+        <Button fx:id="button">
+            Hello Button
+        </Button>
+    </center>
+
+
+</BorderPane>
