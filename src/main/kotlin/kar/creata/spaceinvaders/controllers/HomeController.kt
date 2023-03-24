@@ -6,18 +6,20 @@ import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.fxml.Initializable
 import javafx.scene.Node
+import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.image.ImageView
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.StackPane
 import javafx.scene.text.Text
+import javafx.stage.Stage
 import kar.creata.spaceinvaders.App
 import java.net.URL
 import java.util.*
 
 class HomeController : Initializable {
-
     @FXML
     lateinit var background: StackPane
 
@@ -37,9 +39,13 @@ class HomeController : Initializable {
 
 
         button.onAction = EventHandler {
+            switchToGame()
+        };
 
+    }
 
-            (it.source as Node).scene.root = FXMLLoader.load(javaClass.getResource("../game.fxml"));
-        }
+    private fun switchToGame() {
+        (background.scene.window as Stage).scene.root =
+            FXMLLoader.load(javaClass.getResource("../game.fxml"))
     }
 }
